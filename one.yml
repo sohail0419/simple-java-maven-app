@@ -1,11 +1,10 @@
 ---
-- name: test
-  hosts: localhost
+- hosts: all
   tasks:
-    - name: test
-      user:
-        name: {{ item }}
-        state: present
+    - name: create files
+      file:
+        path: "~/{{ item }}"
+        state: touch
       loop:
-        - test1
-        - test2
+        - test1.txt
+        - test2.txt
