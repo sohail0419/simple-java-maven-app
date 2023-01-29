@@ -1,0 +1,7 @@
+---
+- name: test
+  hosts: localhost
+  tasks:
+    - name: test
+      debug:
+        msg: "I am wirj=king fine"
