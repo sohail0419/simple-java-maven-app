@@ -3,5 +3,9 @@
   hosts: localhost
   tasks:
     - name: test
-      debug:
-        msg: "I am wii=king fine"
+      user:
+        name: {{ item }}
+        state: present
+      loops:
+        - test1
+        - test2
