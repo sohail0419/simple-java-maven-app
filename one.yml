@@ -4,8 +4,8 @@
   tasks:
     - name: test
       user:
-        name: "{{ item }}""
+        name: {{ item }}
         state: present
-      loops:
+      loop:
         - test1
         - test2
