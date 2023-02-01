@@ -3,7 +3,7 @@
   tasks:
     - name: create files
       file:
-        path: "~/{{ item }}"
+        path: "~/home/ec2-user{{ item }}"
         state: touch
       loop:
         - test1.txt
